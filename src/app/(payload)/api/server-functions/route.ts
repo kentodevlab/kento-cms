@@ -3,6 +3,8 @@ import configPromise from "@payload-config"
 import { importMap } from "../../admin/importMap"
 import { NextRequest } from "next/server"
 
+export const dynamic = "force-dynamic"
+
 export async function POST(request: NextRequest) {
   const body = await request.json()
   const result = await handleServerFunctions({
