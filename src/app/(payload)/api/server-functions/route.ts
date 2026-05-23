@@ -1,4 +1,4 @@
-import { handleServerFunctions } from "@payloadcms/next/utilities"
+import { handleServerFunctions } from "@payloadcms/next/layouts"
 import { NextRequest } from "next/server"
 
 export async function POST(request: NextRequest) {
