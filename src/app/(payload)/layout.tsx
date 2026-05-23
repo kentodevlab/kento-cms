@@ -1,6 +1,5 @@
-import { RootLayout } from "@payloadcms/next/layouts"
+import { RootLayout, handleServerFunctions } from "@payloadcms/next/layouts"
 import configPromise from "@payload-config"
-import { handleServerFunctions } from "@payloadcms/next/utilities"
 import { importMap } from "./admin/importMap"
 
 export { metadata } from "@payloadcms/next/layouts"
