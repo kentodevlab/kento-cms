@@ -7,7 +7,7 @@ export default async function AdminPage({
   searchParams,
 }: {
   params: Promise<{ segments: string[] }>
-  searchParams: Promise<Record<string, string | string[] | undefined>>
+  searchParams: Promise<{ [key: string]: string | string[] }>
 }) {
   return RootPage({
     config: configPromise,
