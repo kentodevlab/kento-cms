@@ -3,6 +3,7 @@ import type { CollectionConfig } from "payload"
 export const Settings: CollectionConfig = {
   slug: "settings",
   admin: { useAsTitle: "siteName" },
+  access: { read: () => true },
   fields: [
     { name: "siteName", type: "text" },
     { name: "tagline", type: "text" },

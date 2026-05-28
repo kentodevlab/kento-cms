@@ -1,6 +1,7 @@
 import { buildConfig } from "payload"
 import { mongooseAdapter } from "@payloadcms/db-mongodb"
 import { lexicalEditor } from "@payloadcms/richtext-lexical"
+import { vercelBlobStorage } from "@payloadcms/storage-vercel-blob"
 import { Users } from "./collections/Users"
 import { Services } from "./collections/Services"
 import { Portfolio } from "./collections/Portfolio"
@@ -35,5 +36,14 @@ export default buildConfig({
   db: mongooseAdapter({
     url: process.env.DATABASE_URI || "",
   }),
+  plugins: [
+    vercelBlobStorage({
+      enabled: true,
+      collections: {
+        media: true,
+      },
+      token: process.env.BLOB_READ_WRITE_TOKEN || "",
+    }),
+  ],
   cors: ["https://kentodevlab.com"],
 })
