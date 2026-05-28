@@ -1,16 +1,6 @@
 {
   "framework": "nextjs",
-  "buildCommand": "npx next build",
+  "buildCommand": "next build",
   "outputDirectory": ".next",
-  "installCommand": "npm install",
-  "crons": [
-    {
-      "path": "/api/payload-jobs/run",
-      "schedule": "0 */1 * * *",
-      "method": "POST",
-      "headers": {
-        "Authorization": "Bearer ${CRON_SECRET}"
-      }
-    }
-  ]
+  "installCommand": "npm install"
 }
